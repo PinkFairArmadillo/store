@@ -1,39 +1,62 @@
 
 * {
     padding: 0; 
-    margin: 0; 
+    margin: 0;
 }
 
 
 .header {
+    text-align: center;
     width: 100%; 
     background-color: blue; 
     border: solid; 
-    border-color: green; 
+    border-color: black; 
     flex-direction: row; 
+    background-image: url("http://www.index.hr/images2/jesenudomu.jpg");
+    background-position: 25%;
+    background-size: 75rem;
 }
+
+/* .header #logo {
+    font-family: 'Olswad';
+} */
+
+h1 {
+    font-size: 30px;
+    font-size: 3.0rem;
+    font-style: italic;
+    font-family: "Arial";
+}
+
 
 .productdisplay {
     width: 100%; 
     height: 400px; 
     border: solid; 
-    border-color: purple; 
+    border-color: black; 
     background-color: blue; 
     margin-top: 250px;
+    background-image: url("http://images.unsplash.com/photo-1484502249930-e1da807099a5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=0c77806f7979aed7a3732dc3a4881685");
+    background-position: 25%;
+    background-size: 120rem;
 }
 
 
 .singleitem  {
     border: solid; 
-    border-color: purple; 
-    height: 100px;
+    border-color: silver; 
+    height: 350px;
     width: 100px;
+    background-color: lightblue;
+    background-image: url("http://www.uidownload.com/files/535/665/152/abstract-simple-blue-background.jpg");
 }
 
 
 body{
     height: 100%;
-    background: #95a5a6;
+     /* // background: #95a5a6; */
+    background-image: url("http://designwoop.com/uploads/2012/03/17_free_subtle_textures_texturetastic_gray.jpg"); 
+
 }
 .chat-box{
     position: absolute;
