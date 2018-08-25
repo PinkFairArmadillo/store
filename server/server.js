@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+//const db = require('./db/postgresql.js');
 const eventController = require('./db/eventControllers/productEventController.js');
 var server = require('http').Server(app);
 const db = require('./db/postgresql.js');
