@@ -9,7 +9,7 @@ class CartContainer extends Component {
       super(props);
   
       this.state = {
-        images: [
+        images: []
   
       }
     }

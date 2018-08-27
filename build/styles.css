@@ -4,7 +4,6 @@
     margin: 0; 
 }
 
-
 .header {
     width: 100%; 
     background-color: blue; 
@@ -22,10 +21,115 @@
     margin-top: 250px;
 }
 
-
 .singleitem  {
     border: solid; 
     border-color: purple; 
     height: 100px;
     width: 100px;
 }
+
+body{
+    height: 100%;
+    background: #95a5a6;
+}
+
+h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.chat-box{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    background: #ececec;
+    width: 300px;
+    border-radius: 5px 5px 0px 0px;
+}
+.chat-head{
+    width: inherit;
+    height: 45px;
+    background: white;
+    border-radius: 5px 5px 0px 0px;
+}
+.chat-head h2{
+    color: black;
+    padding: 15px;
+    display: inline-block;
+}
+.chat-head img{
+    cursor: pointer;
+    float: right;
+    width: 25px;
+    margin: 10px;
+    color: white;
+}
+.chat-body{
+    height: 355px;
+    width: inherit;
+    overflow: auto;
+    margin-bottom: 100px;
+}
+.chat-text{
+    position: absolute;
+    bottom: 50px;
+    height: 45px;
+    width: inherit;
+}
+.chat-text input{
+    width: inherit;
+    height: inherit; 
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    resize: none;
+}
+.chat-text input:active, .chat-text input:focus, .chat-text input:hover{
+    border-color: royalblue;
+}
+
+.send {
+    position: fixed;
+    bottom: 0px;
+    width: inherit;
+    text-align: center;
+    padding: : 5px auto;
+}
+ .send button {
+    background-color: red;
+    position: /*relative*/;
+    bottom: 0px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+    /*margin: 10px auto;*/
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #bdc3c7;
+    box-sizing: border-box;
+    margin: 5px 0px;
+
+
+ }
+.msg-send{
+    background: #2ecc71;
+}
+.msg-receive{
+    background: #3498db;
+}
+.msg-send, .msg-receive{
+    width: 90%;
+    height: 35px;
+    padding: 5px 5px 5px 10px;
+    margin: 10px auto;
+    border-radius: 3px;
+    line-height: 30px;
+    position: relative;
+    color: white;
+}
+.msg-receive:hover, .msg-send:hover{
+    opacity: .9;
+}
+

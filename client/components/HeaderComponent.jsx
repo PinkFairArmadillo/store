@@ -7,7 +7,7 @@ const HeaderComponent = () => {
   
   
 return (
-    <div className="header" > 
+    <div className="header"> 
         <h1>LOGO HERE</h1> 
         <div>LINK TO profile</div>
         <div>LOGO FOR CART WITH LINK</div>
