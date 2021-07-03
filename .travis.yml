@@ -1,0 +1,40 @@
+language: node_js
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
+node_js:
+  - '6.0.0'
+script:
+  - npm run travis-build
+  - mkdir -p toZip
+  - cp appspec.yml toZip/appspec.yml
+  - cp -r build toZip/build
+  - cp -r server toZip/server
+  - cp package.json toZip/package.json
+  - cd toZip
+  - zip -r ../build.zip *
+  - cd ..
+  - mkdir -p dpl_cd_upload
+  - mv build.zip dpl_cd_upload/build.zip
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: dpl_cd_upload
+  skip_cleanup: true
+  on: &2
+    repo: Baratheon-iter/store
+  bucket: baratheonstorebucket
+  region: us-east-1
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: baratheonstorebucket
+  key: build.zip
+  bundle_type: zip
+  application: BaratheonStore
+  deployment_group: BaratheonStoreDeployGroup
+  region: us-east-1
+  on: *2

@@ -1,21 +1,46 @@
-//Dumb Component, will display a logo, cart and user profile link w/ image. 
-import React from 'react'; 
-// import styles.css from '.client/styles.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  flex: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+  navbar: {
+    backgroundColor: "#7a45ff",
+  }
+};
 
-const HeaderComponent = () => {
-  
-  
-return (
-    <div className="header" > 
-        <h1>LOGO HERE</h1> 
-        <div>LINK TO profile</div>
-        <div>LOGO FOR CART WITH LINK</div>
+function HeaderComponent(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar className='navbar' position="static">
+        <Toolbar>
+          <Typography variant="title" color="inherit" className={classes.flex}>
+            eStore for things that are tight
+          </Typography>
+          <Button color="inherit">Cart</Button>
+          <Button color="inherit">Logout</Button>
+        </Toolbar>
+      </AppBar>
     </div>
-    )
- }
+  );
+}
 
+HeaderComponent.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-
-
-export default HeaderComponent;  
+export default withStyles(styles)(HeaderComponent);

@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-
-const SingleProduct = () => {
+const SingleProduct = (props) => {
   return (
    <div className="singleitem">
-    <p>INDIVIDUAL ITEMS</p> 
+    <p>{props.itemName}</p>
+    <img src={props.url}></img> 
   </div>  
   )
 }
